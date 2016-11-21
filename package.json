@@ -3,6 +3,7 @@
   "version": "0.0.1-dev",
   "description": "Module for ionic 2 shipping the wonderfull PhotoSwipe JavaScript plugin.",
   "main": "./dist/heilbaum_photoswipe.js",
+  "typings": "./dist/heilbaum_photoswipe.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublish": "rm -rf dist && tsc && npm run prepublish:cpphotoswipe && npm run prepublish:cpdefinitions",

@@ -10,6 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 import { NgModule } from '@angular/core';
 import { IonicModule } from 'ionic-angular';
 import { HeilBaumPhotoSwipeComponent } from "./heilbaum_photoswipe.component";
+import { HeilBaumPhotoSwipeController } from "./heilbaum_photoswipe";
 export var HeilBaumPhotoSwipeModule = (function () {
     function HeilBaumPhotoSwipeModule() {
     }
@@ -19,7 +20,8 @@ export var HeilBaumPhotoSwipeModule = (function () {
             declarations: [
                 HeilBaumPhotoSwipeComponent
             ],
-            entryComponents: [HeilBaumPhotoSwipeComponent]
+            entryComponents: [HeilBaumPhotoSwipeComponent],
+            providers: [HeilBaumPhotoSwipeController]
         }), 
         __metadata('design:paramtypes', [])
     ], HeilBaumPhotoSwipeModule);

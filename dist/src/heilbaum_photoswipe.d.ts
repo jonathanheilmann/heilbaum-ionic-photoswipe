@@ -1,4 +1,4 @@
-/// <reference types="core-js" />
+/// <reference types="es6-shim" />
 import { PhotoSwipeItem } from "./photoswipe/PhotoSwipeItem";
 import { ViewController, App } from "ionic-angular";
 import { PhotoSwipeOptions } from "./photoswipe/PhotoSwipeOptions";

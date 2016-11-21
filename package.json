@@ -42,7 +42,7 @@
     "zone.js": "0.6.26"
   },
   "devDependencies": {
-    "@types/core-js": "^0.9.34",
+    "@types/es6-shim": "^0.31.32",
     "typescript": "2.0.6",
     "typings": "^2.0.0"
   }

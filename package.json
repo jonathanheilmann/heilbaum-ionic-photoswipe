@@ -5,7 +5,9 @@
   "main": "./dist/heilbaum_photoswipe.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "rm -rf dist && tsc && cp ./src/photoswipe/photoswipe.js ./dist/src/photoswipe/photoswipe.js && cp ./src/photoswipe/photoswipe.d.ts ./dist/src/photoswipe/photoswipe.d.ts && cp ./src/photoswipe/photoswipe-ui-default.js ./dist/src/photoswipe/photoswipe-ui-default.js && cp ./src/photoswipe/photoswipe-ui-default.d.ts ./dist/src/photoswipe/photoswipe-ui-default.d.ts"
+    "prepublish": "rm -rf dist && tsc && npm run prepublish:cpphotoswipe && npm run prepublish:cpdefinitions",
+    "prepublish:cpphotoswipe": "cp ./src/photoswipe/photoswipe.js ./dist/src/photoswipe/photoswipe.js && cp ./src/photoswipe/photoswipe.d.ts ./dist/src/photoswipe/photoswipe.d.ts && cp ./src/photoswipe/photoswipe-ui-default.js ./dist/src/photoswipe/photoswipe-ui-default.js && cp ./src/photoswipe/photoswipe-ui-default.d.ts ./dist/src/photoswipe/photoswipe-ui-default.d.ts",
+    "prepublish:cpdefinitions": "cp ./src/photoswipe/PhotoSwipeItem.d.ts ./dist/src/photoswipe/PhotoSwipeItem.d.ts && cp ./src/photoswipe/PhotoSwipeOptions.d.ts ./dist/src/photoswipe/PhotoSwipeOptions.d.ts"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,8 @@
     "zone.js": "0.6.26"
   },
   "devDependencies": {
-    "typescript": "2.0.6"
+    "@types/core-js": "^0.9.34",
+    "typescript": "2.0.6",
+    "typings": "^2.0.0"
   }
 }

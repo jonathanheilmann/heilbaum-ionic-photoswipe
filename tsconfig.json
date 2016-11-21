@@ -7,12 +7,18 @@
     "sourceMap": true,
     "lib": [
       "dom",
-      "es2015"
+      "es5"
     ],
     "module": "es2015",
     "moduleResolution": "node",
     "target": "es5",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "typeRoots": [
+      "../node_modules/@types"
+    ],
+    "types": [
+      "core-js"
+    ]
   },
   "exclude": [
     "node_modules"

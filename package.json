@@ -1,6 +1,6 @@
 {
   "name": "heilbaum_photoswipe",
-  "version": "0.0.1-dev",
+  "version": "0.0.1",
   "description": "Module for ionic 2 shipping the wonderfull PhotoSwipe JavaScript plugin.",
   "main": "./dist/heilbaum_photoswipe.js",
   "typings": "./dist/heilbaum_photoswipe.d.ts",

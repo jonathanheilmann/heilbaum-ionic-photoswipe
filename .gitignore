@@ -1,0 +1,21 @@
+# Node generated files
+node_modules
+npm-debug.log
+yarn.lock
+
+# OS generated files
+Thumbs.db
+.DS_Store
+
+# WebStorm generated files
+.idea
+
+# Ignored files
+*.js
+*.map
+*.d.ts
+*.css
+
+# Ignored folders
+dist
+aot

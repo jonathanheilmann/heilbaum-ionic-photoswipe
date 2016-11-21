@@ -5,8 +5,7 @@
   "main": "./dist/heilbaum_photoswipe.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "rm -rf dist && tsc && npm run prepublish:after",
-    "prepublish:after": "cp ./src/photoswipe/photoswipe.js ./dist/src/photoswipe/photoswipe.js && cp ./src/photoswipe/photoswipe.d.ts ./dist/src/photoswipe/photoswipe.d.ts && cp ./src/photoswipe/photoswipe-ui-default.js ./dist/src/photoswipe/photoswipe-ui-default.js && cp ./src/photoswipe/photoswipe-ui-default.d.ts ./dist/src/photoswipe/photoswipe-ui-default.d.ts"
+    "prepublish": "rm -rf dist && tsc && cp ./src/photoswipe/photoswipe.js ./dist/src/photoswipe/photoswipe.js && cp ./src/photoswipe/photoswipe.d.ts ./dist/src/photoswipe/photoswipe.d.ts && cp ./src/photoswipe/photoswipe-ui-default.js ./dist/src/photoswipe/photoswipe-ui-default.js && cp ./src/photoswipe/photoswipe-ui-default.d.ts ./dist/src/photoswipe/photoswipe-ui-default.d.ts"
   },
   "repository": {
     "type": "git",

@@ -9,13 +9,3 @@ Thumbs.db
 
 # WebStorm generated files
 .idea
-
-# Ignored files
-*.js
-*.map
-*.d.ts
-*.css
-
-# Ignored folders
-dist
-aot

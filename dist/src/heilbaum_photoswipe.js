@@ -3,19 +3,9 @@ var __extends = (this && this.__extends) || function (d, b) {
     function __() { this.constructor = d; }
     d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
 };
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 import { ViewController, App } from "ionic-angular";
 import { HeilBaumPhotoSwipeComponent } from "./heilbaum_photoswipe.component";
 import { Injectable } from "@angular/core";
-import { AppPortal } from "ionic-angular/components/app/app-root";
 export var HeilBaumPhotoSwipe = (function (_super) {
     __extends(HeilBaumPhotoSwipe, _super);
     /**
@@ -39,7 +29,7 @@ export var HeilBaumPhotoSwipe = (function (_super) {
      */
     HeilBaumPhotoSwipe.prototype.present = function (navOptions) {
         if (navOptions === void 0) { navOptions = {}; }
-        return this._app.present(this, navOptions, AppPortal.MODAL);
+        return this._app.present(this, navOptions, 1 /* MODAL */);
     };
     return HeilBaumPhotoSwipe;
 }(ViewController));
@@ -63,10 +53,13 @@ export var HeilBaumPhotoSwipeController = (function () {
         if (options === void 0) { options = {}; }
         return new HeilBaumPhotoSwipe(this._app, { items: items, options: options });
     };
-    HeilBaumPhotoSwipeController = __decorate([
-        Injectable(), 
-        __metadata('design:paramtypes', [App])
-    ], HeilBaumPhotoSwipeController);
+    HeilBaumPhotoSwipeController.decorators = [
+        { type: Injectable },
+    ];
+    /** @nocollapse */
+    HeilBaumPhotoSwipeController.ctorParameters = [
+        { type: App, },
+    ];
     return HeilBaumPhotoSwipeController;
 }());
 //# sourceMappingURL=heilbaum_photoswipe.js.map

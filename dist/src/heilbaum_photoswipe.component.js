@@ -34,13 +34,9 @@ export var HeilBaumPhotoSwipeComponent = (function () {
      * Angular 2 Lifecycle Hook
      */
     HeilBaumPhotoSwipeComponent.prototype.ngAfterViewInit = function () {
-        var _this = this;
         var pswpElement = document.querySelectorAll('.pswp')[0];
         this.gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, this.items, this.options);
         this.gallery.init();
-        this.gallery.listen('destroy', function () {
-            _this.viewCtrl.dismiss();
-        });
     };
     HeilBaumPhotoSwipeComponent.decorators = [
         { type: Component, args: [{

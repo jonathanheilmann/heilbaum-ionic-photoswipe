@@ -59,10 +59,6 @@ export class HeilBaumPhotoSwipeComponent implements OnInit, AfterViewInit {
 
     this.gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, this.items, this.options);
     this.gallery.init();
-
-    this.gallery.listen('destroy', () => {
-      this.viewCtrl.dismiss()
-    })
   }
 
 }

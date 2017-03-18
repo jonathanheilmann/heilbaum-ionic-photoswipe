@@ -3,6 +3,9 @@ node_modules
 npm-debug.log
 yarn.lock
 
+dist/
+aot/
+
 # OS generated files
 Thumbs.db
 .DS_Store

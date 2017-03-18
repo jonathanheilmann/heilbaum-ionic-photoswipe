@@ -1,0 +1,82 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Documentation</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h2>Content</h2>
+  <ul>
+    <li>
+      <a href="#HeilbaumPhotoswipeController">HeilbaumPhotoswipeController</a>
+    </li>
+    <li>
+      <a href="#HeilbaumPhotoswipe">HeilbaumPhotoswipe</a>
+    </li>
+    <li>
+      <a href="#PhotoswipeOptions">PhotoswipeOptions</a>
+    </li>
+    <li>
+      <a href="#PhotoswipeItem">PhotoswipeItem</a>
+    </li>
+    <li>
+      <a href="#Template">Template</a>
+    </li>
+  </ul>
+
+  <h3 id="HeilbaumPhotoswipeController">HeilbaumPhotoswipeController</h3>
+  <p>
+    <code>HeilbaumPhotoswipeController</code> must be injected to component in constructor and is used to create a
+    <a href="#HeilbaumPhotoswipe">HeilbaumPhotoswipe</a> instance.
+  </p>
+
+  <h3 id="HeilbaumPhotoswipe">HeilbaumPhotoswipe</h3>
+  <p>
+    Extends <a href="http://ionicframework.com/docs/v2/api/navigation/ViewController/"
+       target="_blank"
+       title="Open ionic's ViewController documentation">ionic's ViewController</a> and thus provides all of it's
+    methods.<br>
+    Create new <code>HeilbaumPhotoswipe</code> instance and set some options:
+  </p>
+  <pre><code>{{ code.heilbaumPhotoswipeController.example }}</code></pre>
+  <h4>create(items: Array&lt;PhotoswipeItems&gt;, options?: PhotoswipeOptions)</h4>
+  <p>
+    Creates a new PhotoSwipe instance by passing an array of <a href="#PhotoswipeItem">PhotoswipeItem</a>s and
+    optional <a href="#PhotoswipeOptions">PhotoswipeOptions</a>.<br>
+    This method returns an instance of <code>HeilbaumPhotoswipe</code>
+  </p>
+
+  <h3 id="PhotoswipeOptions">PhotoswipeOptions</h3>
+  <p>
+    <code>PhotoswipeOptions</code> is an object of PhotoSwipe options documented on
+    <a href="http://photoswipe.com/documentation/options.html"
+       target="_blank"
+       title="Open PhotoSwipe options documentation">
+      photoswipe.com
+    </a>.<br>
+    Example:
+  </p>
+  <pre><code>{{ code?.photoswipeOptions?.example }}</code></pre>
+
+  <h3 id="PhotoswipeItem">PhotoswipeItem</h3>
+  <p>
+    <code>PhotoswipeItem</code> declares an object type with all properties possible in PhotoSwipe.
+  </p>
+  <p class="bg-info">
+    Please consider: If <code>src</code> is set, <code>w</code> and <code>h</code> is required
+  </p>
+  <pre><code>{{ code?.photoswipeItem?.type}}</code></pre>
+
+  <h3 id="Template">Template</h3>
+  <p>
+    Coming within version 0.2.0
+  </p>
+
+</ion-content>

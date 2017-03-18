@@ -1,5 +1,5 @@
 import { Component, ViewChild, ElementRef } from '@angular/core';
-import { HeilbaumPhotoswipeController, PhotoswipeOptions, PhotoswipeItem, HeilbaumPhotoswipe } from "heilbaum-photoswipe";
+import { HeilbaumPhotoswipeController, PhotoswipeOptions, PhotoswipeItem, HeilbaumPhotoswipe } from "heilbaum-ionic-photoswipe";
 import { NavController, NavParams } from 'ionic-angular';
 
 @Component({

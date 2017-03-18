@@ -1,19 +1,18 @@
 {
   "name": "heilbaum-ionic-photoswipe",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "This component provides the fabulous PhotoSwipe gallery within ionic 2.",
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
     "ngc": "ngc",
-    "tsc": "tsc",
     "build": "rm -rf aot dist && npm run ngc",
     "publishPackage": "npm run build && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonathanheilmann/heilbaum_photoswipe.git"
+    "url": "git+https://github.com/jonathanheilmann/heilbaum-ionic-photoswipe.git"
   },
   "keywords": [
     "ionic",
@@ -24,9 +23,9 @@
   "author": "Jonathan Heilmann",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jonathanheilmann/heilbaum_photoswipe/issues"
+    "url": "https://github.com/jonathanheilmann/heilbaum-ionic-photoswipe/issues"
   },
-  "homepage": "https://github.com/jonathanheilmann/heilbaum_photoswipe#readme",
+  "homepage": "https://github.com/jonathanheilmann/heilbaum-ionic-photoswipe#readme",
   "dependencies": {
     "photoswipe": "^4.1.1"
   },

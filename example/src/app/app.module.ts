@@ -1,5 +1,6 @@
 import { NgModule, ErrorHandler } from '@angular/core';
-import { HeilbaumPhotoswipeModule } from "heilbaum-photoswipe";
+import { ObjectFitImagesModule } from "heilbaum-ionic-object-fit-images";
+import { HeilbaumPhotoswipeModule } from "heilbaum-ionic-photoswipe";
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 
 import { MyApp } from './app.component';
@@ -30,6 +31,7 @@ import { GettingStartedPage } from "../pages/getting-started/getting-started";
         segment: 'documentation'
       }]
     }),
+    ObjectFitImagesModule,
     HeilbaumPhotoswipeModule
   ],
   bootstrap: [IonicApp],

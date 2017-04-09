@@ -55,7 +55,6 @@ export class HeilbaumPhotoswipeComponent implements OnInit, AfterViewInit {
      * Angular 2 Lifecycle Hook
      */
     ngAfterViewInit() {
-        console.log(this.items);
         const pswpElement: Element = this.elementRef.nativeElement.firstElementChild;
 
         this.gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, this.items, this.options);

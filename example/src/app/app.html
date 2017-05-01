@@ -1,0 +1,35 @@
+<ion-split-pane>
+  <ion-menu [content]="content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <ion-list>
+        <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+          {{p.title}}
+        </button>
+        <ion-item-divider>
+          About
+        </ion-item-divider>
+        <a menuClose ion-item href="https://heilbaum.de/" title="Open heilbaum.de" target="_blank">
+          heilbaum.de
+        </a>
+      </ion-list>
+    </ion-content>
+
+    <ion-footer>
+      <ion-list style="margin-bottom:0;">
+        <ion-item-divider>
+          Related to version: 0.1.2
+        </ion-item-divider>
+      </ion-list>
+    </ion-footer>
+
+  </ion-menu>
+
+  <!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+  <ion-nav [root]="rootPage" #content swipeBackEnabled="false" main></ion-nav>
+</ion-split-pane>

@@ -1,0 +1,57 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Examples</ion-title>
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="segment">
+      <ion-segment-button value="single">
+        Single-Thumbnail
+      </ion-segment-button>
+      <ion-segment-button value="multi">
+        Multi-Thumbnail
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding (window:resize)="onResize()">
+
+  <div [ngSwitch]="segment">
+    <div *ngSwitchCase="'single'">
+      <p>Single thumbnail with multiple images in PhotoSwipe.</p>
+      <p text-center>
+        <img tappable
+             [alt]="singlePhotoswipeItem?.title"
+             [src]="singlePhotoswipeItem?.src"
+             [title]="singlePhotoswipeItem?.title"
+             [width]="singlePhotoswipeItem?.w"
+             (click)="pswpSingleThumbnail()" />
+      </p>
+    </div>
+
+    <div *ngSwitchCase="'multi'">
+      <p>List of thumbnails (using grid component), starting at clicked/tapped image in PhotoSwipe.</p>
+      <ion-row #imageRowEl>
+        <ion-col *ngFor="let photoswipeItem of photoswipeItems; let index = index" #colEl col-4 col-sm-3 col-md-3 col-lg-3 col-xl-3>
+          <img tappable
+               [alt]="photoswipeItem.title"
+               [height]="imageHeight || calcImageHeight(colEl)"
+               [src]="photoswipeItem.src"
+               [title]="photoswipeItem.title"
+               [width]="imageWidth || calcImageWidth(colEl)"
+               (click)="pswpMultiThumbnail(index)"
+               object-fit="cover" />
+        </ion-col>
+      </ion-row>
+    </div>
+
+  </div>
+
+</ion-content>

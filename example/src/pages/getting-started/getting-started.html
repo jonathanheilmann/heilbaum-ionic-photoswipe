@@ -1,0 +1,118 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Getting Started</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <h2>Heilbaum Ionic PhotoSwipe Component</h2>
+
+  <h3>What does it do?</h3>
+  <p>
+    This component provides the fabulous PhotoSwipe gallery within ionic 2.<br>
+    For more information about PhotoSwipe see
+    <a href="http://photoswipe.com/" title="Opens PhotoSwipe website" target="_blank">photoswipe.com</a>.
+  </p>
+  <ion-row justify-content-center>
+    <ion-col col-12 col-sm-8 col-md-8 col-lg-6 col-xl-6>
+      <img tappable
+           [alt]="singlePhotoswipeItem?.title"
+           [src]="singlePhotoswipeItem?.src"
+           [title]="singlePhotoswipeItem?.title"
+           [width]="singlePhotoswipeItem?.w"
+           (click)="pswpSingleThumbnail()" />
+    </ion-col>
+  </ion-row>
+
+  <h3>Installation</h3>
+  <p>
+    Installation is somehow tricky, but this way of installation provides some more flexibility, as you are able to
+    customize PhotoSwipe's modules and it's template.
+  </p>
+  <ol>
+    <li>
+      Install component via <code>npm install heilbaum-ionic-photoswipe --save</code>
+    </li>
+    <li>
+      Add <code>HeilbaumPhotoswipeModule</code> to imports array in src/app/app.modules.ts' NgModules decorator.
+    </li>
+    <li>
+      Create file <code>config/copy.config.js</code> and insert:
+      <pre><code>{{ code.copyConfigJs }}</code></pre>
+      or ad least add content of <code>photoSwipe</code> to your own <code>copy.config.js</code>.<br>
+      If you use a customized <code>photoswipe.js</code> and/or <code>photoswipe-ui-default.js</code>, update the
+      src-path.
+    </li>
+    <li>
+      Add
+      <pre><code>{{ code.packageJson }}</code></pre>
+      to your package.json
+    </li>
+  </ol>
+
+  <h3>Usage</h3>
+  <ol>
+    <li>
+      Inject <code>HeilbaumPhotoswipeController</code> to your component:
+      <pre><code>{{ code.componentConstructor }}</code></pre>
+    </li>
+    <li>
+      And add this method to your component:
+      <pre><code>{{ code.componentSingleThumbnail }}</code></pre>
+      where <code>this.photoswipeItems</code> is an array of objects of type
+      <a [navPush]="documentationPage">PhotoswipeItem</a>
+    </li>
+    <li>
+      Add gallery thumbnail to html:
+      <pre><code>{{ code.componentTemplate }}</code></pre>
+    </li>
+  </ol>
+  <p>
+    You may find some more example of implementations on page <a [navPush]="examplePage">Example</a>
+    and it's code on <a href="" title="Open example code on GitHub" target="_blank">GitHub</a>.
+  </p>
+
+  <h3>Documentation</h3>
+  <ul>
+    <li>
+      <a [navPush]="documentationPage">Components documentation</a>
+    </li>
+    <li>
+      <a href="http://photoswipe.com/documentation/getting-started.html" title="Open PhotoSwipe documentation" target="_blank">
+        PhotoSwipe documentation
+      </a>
+    </li>
+  </ul>
+
+  <h3>License</h3>
+  <pre>
+MIT License
+
+Copyright (c) 2016-2017 HeilBaum (Carsten Baumhögger & Jonathan Heilmann)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+  </pre>
+</ion-content>

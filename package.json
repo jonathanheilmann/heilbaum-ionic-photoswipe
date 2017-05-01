@@ -1,18 +1,18 @@
 {
-  "name": "heilbaum_photoswipe",
-  "version": "0.0.3",
-  "description": "Module for ionic 2 shipping the wonderfull PhotoSwipe JavaScript plugin.",
-  "main": "./dist/heilbaum_photoswipe.js",
-  "typings": "./dist/heilbaum_photoswipe.d.ts",
+  "name": "heilbaum-ionic-photoswipe",
+  "version": "0.1.2",
+  "description": "This component provides the fabulous PhotoSwipe gallery within ionic 2.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublish": "rm -rf dist && node_modules/.bin/ngc && npm run prepublish:cpphotoswipe && npm run prepublish:cpdefinitions",
-    "prepublish:cpphotoswipe": "cp ./src/photoswipe/photoswipe.js ./dist/src/photoswipe/photoswipe.js && cp ./src/photoswipe/photoswipe.d.ts ./dist/src/photoswipe/photoswipe.d.ts && cp ./src/photoswipe/photoswipe-ui-default.js ./dist/src/photoswipe/photoswipe-ui-default.js && cp ./src/photoswipe/photoswipe-ui-default.d.ts ./dist/src/photoswipe/photoswipe-ui-default.d.ts",
-    "prepublish:cpdefinitions": "cp ./src/photoswipe/PhotoSwipeItem.d.ts ./dist/src/photoswipe/PhotoSwipeItem.d.ts && cp ./src/photoswipe/PhotoSwipeOptions.d.ts ./dist/src/photoswipe/PhotoSwipeOptions.d.ts"
+    "ngc": "ngc",
+    "build": "rm -rf aot dist && npm run ngc",
+    "publishPackage": "npm run build && npm publish",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jonathanheilmann/heilbaum_photoswipe.git"
+    "url": "git+https://github.com/jonathanheilmann/heilbaum-ionic-photoswipe.git"
   },
   "keywords": [
     "ionic",
@@ -23,27 +23,26 @@
   "author": "Jonathan Heilmann",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jonathanheilmann/heilbaum_photoswipe/issues"
+    "url": "https://github.com/jonathanheilmann/heilbaum-ionic-photoswipe/issues"
   },
-  "homepage": "https://github.com/jonathanheilmann/heilbaum_photoswipe#readme",
+  "homepage": "https://github.com/jonathanheilmann/heilbaum-ionic-photoswipe#readme",
   "dependencies": {
+    "photoswipe": "^4.1.1"
   },
   "devDependencies": {
-    "@types/es6-shim": "^0.31.32",
-    "typescript": "2.0.9",
-    "typings": "^2.0.0",
-    "@angular/common": "2.2.1",
-    "@angular/compiler": "2.2.1",
-    "@angular/compiler-cli": "2.2.1",
-    "@angular/core": "2.2.1",
-    "@angular/forms": "2.2.1",
-    "@angular/http": "2.2.1",
-    "@angular/platform-browser": "2.2.1",
-    "@angular/platform-browser-dynamic": "2.2.1",
-    "@angular/platform-server": "2.2.1",
-    "ionic-angular": "2.1.0",
+    "@angular/common": "2.4.8",
+    "@angular/compiler": "2.4.8",
+    "@angular/compiler-cli": "2.4.8",
+    "@angular/core": "2.4.8",
+    "@angular/forms": "2.4.8",
+    "@angular/http": "2.4.8",
+    "@angular/platform-browser": "2.4.8",
+    "@angular/platform-browser-dynamic": "2.4.8",
+    "@angular/platform-server": "2.4.8",
     "@types/node": "^6.0.49",
-    "rxjs": "5.0.0-beta.12",
-    "zone.js": "0.6.26"
+    "ionic-angular": "2.2.0",
+    "rxjs": "5.0.1",
+    "typescript": "2.0.10",
+    "zone.js": "0.7.2"
   }
 }

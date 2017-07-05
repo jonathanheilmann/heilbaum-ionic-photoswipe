@@ -1,4 +1,5 @@
 import { NgModule, ErrorHandler } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 import { ObjectFitImagesModule } from "heilbaum-ionic-object-fit-images";
 import { HeilbaumPhotoswipeModule } from "heilbaum-ionic-photoswipe";
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -31,6 +32,7 @@ import { GettingStartedPage } from "../pages/getting-started/getting-started";
         segment: 'documentation'
       }]
     }),
+    BrowserModule,
     ObjectFitImagesModule,
     HeilbaumPhotoswipeModule
   ],

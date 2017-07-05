@@ -1,10 +1,10 @@
-import { Injectable } from "@angular/core";
-import { ViewController, App } from "ionic-angular";
-import { AppPortal } from "ionic-angular/components/app/app-root";
+import { Injectable } from '@angular/core';
+import { PORTAL_MODAL } from 'ionic-angular/components/app/app-constants';
+import { ViewController, App, NavOptions } from 'ionic-angular';
 
-import { HeilbaumPhotoswipeComponent } from "../components/heilbaum-photoswipe";
-import { PhotoswipeItem } from "../photoswipe/PhotoswipeItem";
-import { PhotoswipeOptions } from "../photoswipe/PhotoswipeOptions";
+import { HeilbaumPhotoswipeComponent } from '../components/heilbaum-photoswipe';
+import { PhotoswipeItem } from '../photoswipe/PhotoswipeItem';
+import { PhotoswipeOptions } from '../photoswipe/PhotoswipeOptions';
 
 export class HeilbaumPhotoswipe extends ViewController {
     private _app: App;
@@ -18,7 +18,7 @@ export class HeilbaumPhotoswipe extends ViewController {
     constructor(app: App, data: any) {
         data = data || {};
 
-        super(HeilbaumPhotoswipeComponent, data, '');
+        super(HeilbaumPhotoswipeComponent, data, null);
         this._app = app;
         this.isOverlay = true;
     }
@@ -29,8 +29,8 @@ export class HeilbaumPhotoswipe extends ViewController {
      * @param navOptions
      * @returns {Promise} Returns a promise which is resolved when the transition has completed.
      */
-    present(navOptions = {}) {
-        return this._app.present(this, navOptions, AppPortal.MODAL);
+    present(navOptions: NavOptions = {}) {
+        return this._app.present(this, navOptions, PORTAL_MODAL);
     }
 
 }
